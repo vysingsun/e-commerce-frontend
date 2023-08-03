@@ -1,6 +1,7 @@
 <script setup>
     import HeaderNoLoginYet from '../components/HeaderNoLogin.vue'
     import FooterNoLoginYet from '../components/FooterNoLogin.vue'
+    import { RouterLink } from 'vue-router';
 </script>
 <template>
     <HeaderNoLoginYet />
@@ -14,9 +15,9 @@
         birds in all of the regions of the United States and Canada. 
         Download any of our guides for free now!</strong></p>
       <div class="">
-        <a href="/vysingsun_e_commerce.github.io/login">
+        <RouterLink to="/login">
           <button class="bg-black text-white px-[10%] py-[5%] mt-4"><strong>VIEW COLLECTIONS</strong></button>
-        </a>
+        </RouterLink>
       </div>
     </div>
     <!-- svg & pic -->
@@ -34,9 +35,9 @@
   </div>
 
   <div class="w-full px-10 mt-8">
-    <a href="/vysingsun_e_commerce.github.io/login">
+    <RouterLink to="/homeAdmin/category">
       <div class="w-full bg-[#ffbe1c] rounded-3xl p-8 flex justify-center text-white">Click here for 10% off</div>
-    </a>
+    </RouterLink>
   </div>
 
   <!-- product -->
