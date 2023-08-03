@@ -139,7 +139,7 @@
                 console.log(this.name);
                 console.log(this.desc);
                 console.log(this.imageUrl);
-                let result = await axios.post("http://localhost:3001/category/create",{
+                let result = await axios.post("https://vysingsun-api.onrender.com/category/create",{
                     name:this.name,
                     desc:this.desc,
                     imageUrl:this.imageUrl

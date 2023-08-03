@@ -1,6 +1,6 @@
 var categoryApi = {
     async getCategoryItems() {
-        const res = await fetch('http://localhost:3001/category/all',{
+        const res = await fetch('https://vysingsun-api.onrender.com/category/all',{
             method: 'GET',
             // credentials: 'include',
             headers: {
@@ -12,7 +12,7 @@ var categoryApi = {
         return result
     },
     async getCategoryItem() {
-        const res = await fetch('http://localhost:3001/category/categorized-items',{
+        const res = await fetch('https://vysingsun-api.onrender.com/category/categorized-items',{
             method: 'GET',
             // credentials: 'include',
             headers: {
