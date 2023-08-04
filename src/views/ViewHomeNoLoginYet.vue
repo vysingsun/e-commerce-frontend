@@ -8,7 +8,6 @@
     <!-- bodypage -->
   <div class="w-full flex h-[70vh]">
     <!-- label -->
-    <div>hii77</div>
     <div class="w-[50%] ml-36 p-20">
       <div class="text-[#ffbe1c] text-[20px]"><strong>Our Exclusive</strong></div>
       <h1 class="text-[50px]"><strong>Adidas Campus</strong></h1>

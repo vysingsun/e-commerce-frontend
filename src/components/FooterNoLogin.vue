@@ -6,13 +6,13 @@
         <div class="flex items-center">
             <RouterLink to="/" class="flex-shrink-0">
                 <div>
-                    <strong>Buy me a shoes</strong>
+                    <strong>Buy me a shoes 77</strong>
                 </div>
             </RouterLink>
             <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                    <RouterLink to="/login" class=" text-white hover:bg-[#f2b31a] rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</RouterLink>
+                    <RouterLink to="/" class=" text-white hover:bg-[#f2b31a] rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</RouterLink>
                     <RouterLink to="/login" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">Products</RouterLink>
                     <RouterLink to="/login" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</RouterLink>
                     <RouterLink to="/login" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</RouterLink>

@@ -1,3 +1,6 @@
+<script setup>
+    import { RouterLink } from 'vue-router';
+</script>
 <template class="bg-black">
     <div id="i" class="w-[500px] h-[600px] flex items-center border-[1px] border-gray-700 m-auto p-6">
         <div class="w-full">
@@ -37,7 +40,7 @@ export default {
     login(){
         // console.log(this.email);
         // console.log(this.password);
-      fetch('http://localhost:3001/auth/login', {
+      fetch('https://vysingsun-api.onrender.com/auth/login', {
         method: 'POST',
         headers:{
             "Content-Type":"application/json"
