@@ -36,7 +36,7 @@
   </div>
 
   <div class="w-full px-10 mt-8">
-    <RouterLink to="/homeAdmin/category">
+    <RouterLink to="/login">
       <div class="w-full bg-[#ffbe1c] rounded-3xl p-8 flex justify-center text-white">Click here for 10% off</div>
     </RouterLink>
   </div>

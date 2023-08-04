@@ -1,21 +1,24 @@
+<script setup>
+    import { RouterLink } from 'vue-router';
+</script>
 <template>
     <nav class="bg-[#ffbe1c] p-5 ml-0 mt-0">
         <div class="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <a href="/vysingsun_e_commerce.github.io/login">
+                        <RouterLink to="/l">
                             <img class="w-24" src="../assets//image/logoadidas.png" alt="Your Company">
-                        </a>
+                        </RouterLink>
                     </div>
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
                             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                            <a href="/vysingsun_e_commerce.github.io/login" class=" text-white hover:bg-[#f2b31a] rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
-                            <a href="/vysingsun_e_commerce.github.io/login" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">Products</a>
-                            <a href="/vysingsun_e_commerce.github.io/login" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
-                            <a href="/vysingsun_e_commerce.github.io/login" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
-                            <a href="/vysingsun_e_commerce.github.io/login" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">Reports</a>
+                            <RouterLink to="/login" class=" text-white hover:bg-[#f2b31a] rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</RouterLink>
+                            <RouterLink to="/login" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">Products</RouterLink>
+                            <RouterLink to="/login" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</RouterLink>
+                            <RouterLink to="/login" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</RouterLink>
+                            <RouterLink to="/login" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">Reports</RouterLink>
                         </div>
                     </div>
                 </div>
@@ -44,12 +47,12 @@
                             </button>
                             
                             <div class="flex gap-2 ml-3">
-                                <a href="/vysingsun_e_commerce.github.io/login" class="h-8 text-white px-6 flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"  aria-expanded="false" aria-haspopup="true">
+                                <RouterLink to="/login" class="h-8 text-white px-6 flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"  aria-expanded="false" aria-haspopup="true">
                                     <strong>Login</strong>
-                                </a>
-                                <a href="" class="h-8 text-white px-6 flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"  aria-expanded="false" aria-haspopup="true">
+                                </RouterLink>
+                                <RouterLink to="/register" class="h-8 text-white px-6 flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"  aria-expanded="false" aria-haspopup="true">
                                     <strong>Sign Up</strong>
-                                </a>
+                                </RouterLink>
                             </div>
                         </div>
                     </div> 
