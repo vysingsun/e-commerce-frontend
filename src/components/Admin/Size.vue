@@ -115,7 +115,7 @@
         },
         methods: {
             async addSize(){
-                let result = await axios.post("http://localhost:3001/size/create",{
+                let result = await axios.post("https://vysingsun-api.onrender.com/size/create",{
                     product:this.product,
                     size:this.size
                 });
@@ -124,7 +124,7 @@
             },
             deleteSize(sizeId){
                 if(confirm('Are you sure ?')){
-                    axios.post(`http://localhost:3001/size/delete/${sizeId}`)
+                    axios.post(`https://vysingsun-api.onrender.com/size/delete/${sizeId}`)
                         .then(res => {
                             console.log("deleted?");
                             

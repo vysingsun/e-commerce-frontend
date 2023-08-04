@@ -146,7 +146,7 @@ export default {
             orderDetails:'',
             cards:[],
             sub_total:this.$store.getters.getSubtotal,
-            serverUrl: 'http://localhost:3001/static/',
+            serverUrl: 'https://vysingsun-api.onrender.com/static/',
         }
     },
     created(){
@@ -155,7 +155,7 @@ export default {
     },
     methods: {
         async getAllOrderDetail(){
-            await axios.get(`http://localhost:3001/orderDetail/${this.$store.getters.getOrderDetailId}`)
+            await axios.get(`https://vysingsun-api.onrender.com/orderDetail/${this.$store.getters.getOrderDetailId}`)
             .then(async(res) => {
                 this.orderDetails = await res.data.data;
                 console.log(this.orderDetails);
@@ -164,7 +164,7 @@ export default {
             })
         },
         async getAllCard(){
-            await axios.get("http://localhost:3001/card/all")
+            await axios.get("https://vysingsun-api.onrender.com/card/all")
             .then(async(res) =>{
                 this.cards = await res.data.data;
                 console.log(this.cards);

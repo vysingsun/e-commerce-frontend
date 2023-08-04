@@ -80,12 +80,12 @@ export default {
   data() {
     return {
       productFromApi: [],
-      serverUrl: 'http://localhost:3001/static/'
+      serverUrl: 'https://vysingsun-api.onrender.com/static/'
     };
   },
   methods: {
     fetchData() {
-      axios.get('http://localhost:3001/product/allProduct')
+      axios.get('https://vysingsun-api.onrender.com/product/allProduct')
         .then(response => {
           this.productFromApi = response.data;
           console.log(this.productFromApi);

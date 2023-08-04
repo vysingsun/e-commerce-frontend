@@ -115,7 +115,7 @@
         },
         methods: {
             async addPrice(){
-                let result = await axios.post("http://localhost:3001/color/create",{
+                let result = await axios.post("https://vysingsun-api.onrender.com/color/create",{
                     product:this.product,
                     color:this.color
                     
@@ -125,7 +125,7 @@
             },
             deleteColor(colorId){
                 if(confirm('Are you sure ?')){
-                    axios.post(`http://localhost:3001/color/delete/${colorId}`)
+                    axios.post(`https://vysingsun-api.onrender.com/color/delete/${colorId}`)
                         .then(res => {
                             console.log("deleted?");
                             

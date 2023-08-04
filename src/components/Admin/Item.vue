@@ -123,7 +123,7 @@
                 console.log(this.name);
                 console.log(this.desc);
                 console.log(this.category);
-                let result = await axios.post("http://localhost:3001/item/create",{
+                let result = await axios.post("https://vysingsun-api.onrender.com/item/create",{
                     name:this.name,
                     desc:this.desc,
                     category:this.category
@@ -135,7 +135,7 @@
                 
                 if(confirm('Are you sure ?')){
                     console.log(itemId);
-                    axios.post(`http://localhost:3001/item/delete/${itemId}`)
+                    axios.post(`https://vysingsun-api.onrender.com/item/delete/${itemId}`)
                         .then(res => {
                             console.log("deleted?");
                             

@@ -39,7 +39,9 @@
                         </td>
                         <td class="px-6 py-4">
                             <div>Edit</div>
-                            <button @click="DeleteCategory(category._id)">Delete</button>
+                            <form>
+                                <button @click="DeleteCategory(category._id)">Delete</button>
+                            </form>
                         </td>
                     </tr>
                 </tbody>
@@ -153,7 +155,7 @@
                 
                 if(confirm('Are you sure jkj?')){
                     console.log(categoryId);
-                    axios.post(`http://localhost:3001/category/delete/${categoryId}`)
+                    axios.post(`https://vysingsun-api.onrender.com/category/delete/${categoryId}`)
                         .then(res => {
                             console.log("deleted?");
                             

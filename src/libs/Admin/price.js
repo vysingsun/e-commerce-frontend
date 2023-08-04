@@ -1,6 +1,6 @@
 var priceApi = {
     async getPrice() {
-        const res = await fetch('http://localhost:3001/price/all',{
+        const res = await fetch('https://vysingsun-api.onrender.com/price/all',{
             method: 'GET',
             // credentials: 'include',
             headers: {

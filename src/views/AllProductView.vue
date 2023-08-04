@@ -14,10 +14,10 @@ import router from '../router'
             <div class="bg-slate-50 w-[30%] rounded-l-2xl p-8">  
                 <ol v-for="category in categories" :key="category._id" class="space-y-4 list-decimal list-inside dark:text-gray-400">
                     <ul>
-                        <a href="#" @Click="onClick(category._id,'')">{{category.name}}</a>
+                        <button @Click="onClick(category._id,'')">{{category.name}}</button>
                         <ul class="pl-5 mt-2 space-y-1 list-disc list-inside">
                             <li v-for="item in category?.items" :key="item._id">
-                                <a href="#" @click="onClick(item.category, item._id)">{{item.name}}</a>
+                                <div @click="onClick(item.category, item._id)">{{item.name}}</div>
                             </li>                  
                         </ul>
                     </ul>
@@ -58,7 +58,7 @@ export default {
     return {
         categories: [],
         products: [],
-        serverUrl: 'http://localhost:3001/static/',
+        serverUrl: 'https://vysingsun-api.onrender.com/static/',
         imageUrl: null
       
     }

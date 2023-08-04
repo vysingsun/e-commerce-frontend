@@ -105,7 +105,7 @@
         categories: [],
         product: Object,
         // anotherData: [],
-        serverUrl: 'http://localhost:3001/static/',
+        serverUrl: 'https://vysingsun-api.onrender.com/static/',
         imageUrl: null,
         user:'',
         product1:'',
@@ -124,7 +124,7 @@
   methods: {
     getProductByID(){
       // console.log(quantity);
-      axios.get(`http://localhost:3001/product/${this.$route.params.id}`)
+      axios.get(`https://vysingsun-api.onrender.com/product/${this.$route.params.id}`)
       .then(res =>{
         this.product = res.data[0];
         console.log(this.products);
@@ -139,7 +139,7 @@
         product: this.product._id
         
       });
-      let result = await axios.post("http://localhost:3001/card/create", {
+      let result = await axios.post("https://vysingsun-api.onrender.com/card/create", {
         user:this.$store.getters.getUserId,
         color:this.color1,
         size:this.size1,

@@ -1,17 +1,20 @@
+<script>
+    import { RouterLink } from 'vue-router';
+</script>
 <template>
     <div class="bg-[#ffdc1c] w-full px-8 py-2">
         <div class="flex items-center">
-            <a href="/vysingsun_e_commerce.github.io/" class="flex-shrink-0">
+            <router-link to="/home/logined" class="flex-shrink-0">
                 <strong>Buy me a shoes</strong>
-            </a>
+            </router-link>
             <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                    <a href="/vysingsun_e_commerce.github.io/" class=" text-white hover:bg-[#f2b31a] rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
-                    <a href="/vysingsun_e_commerce.github.io/product" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">Products</a>
-                    <a href="#" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
-                    <a href="/vysingsun_e_commerce.github.io/about" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
-                    <a href="#" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">Reports</a>
+                    <RouterLink to="/home/logined" class=" text-white hover:bg-[#f2b31a] rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</RouterLink>
+                    <RouterLink to="/product" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">Products</RouterLink>
+                    <RouterLink to="#" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</RouterLink>
+                    <RouterLink to="/about" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</RouterLink>
+                    <RouterLink to="#" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">Reports</RouterLink>
                 </div>
             </div>
         </div>

@@ -21,7 +21,7 @@
                                         <div class="flex justify-between text-base font-medium text-gray-900">
                                             <h3>
                                                 <div>{{ card.createdAt }}</div>
-                                                <a href="#">{{ card.product.title }}</a>
+                                                <div>{{ card.product.title }}</div>
                                             </h3>
                                             <p class="ml-4">${{ card.product.price }}</p>
                                         </div>
@@ -49,7 +49,7 @@
                 <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                 <RouterLink to="/order" class="mt-6">
                     <!-- @click="storeData" -->
-                    <a  class="mt-6 flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</a>
+                    <div  class="mt-6 flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</div>
                 </RouterLink>
                 <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
                     <p>
@@ -75,7 +75,7 @@ export default {
         return{
             array:[],
             cards:[],
-            serverUrl: 'http://localhost:3001/static/',
+            serverUrl: 'https://vysingsun-api.onrender.com/static/',
 
             products:[],
            
@@ -86,7 +86,7 @@ export default {
     },
     methods: {
         async getAllCard(){
-            await axios.get("http://localhost:3001/card/all")
+            await axios.get("https://vysingsun-api.onrender.com/card/all")
             .then(async(res) =>{
                 this.cards = await res.data.data;
                 
@@ -96,7 +96,7 @@ export default {
             const promises = [];
 
             for (const element of this.cards) {
-                const promise = await axios.post("http://localhost:3001/order/create", element)
+                const promise = await axios.post("https://vysingsun-api.onrender.com/order/create", element)
                     .then(response => {
                         // console.log('Data stored successfully!', response);
                         return response.data.data._id;
@@ -141,7 +141,7 @@ export default {
         // },
         
         removeProductFromCard(cardId){
-            axios.post(`http://localhost:3001/card/delete/${cardId}`)
+            axios.post(`https://vysingsun-api.onrender.com/card/delete/${cardId}`)
             .then(res => {
                 this.getAllCard();
             })

@@ -1,6 +1,6 @@
 var colorApi = {
     async getColor() {
-        const res = await fetch('http://localhost:3001/color/all',{
+        const res = await fetch('https://vysingsun-api.onrender.com/color/all',{
             method: 'GET',
             // credentials: 'include',
             headers: {

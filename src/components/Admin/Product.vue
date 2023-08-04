@@ -138,7 +138,7 @@
                 category: '',
                 item: '',
                 file: '',
-                serverUrl: 'http://localhost:3001/static/',
+                serverUrl: 'https://vysingsun-api.onrender.com/static/',
                 imageUrl: null
             }
         },
@@ -166,7 +166,7 @@
                 formData.append("category", this.category1)
                 formData.append("item", this.item)
                 
-                axios.post("http://localhost:3001/product/create",formData,{
+                axios.post("https://vysingsun-api.onrender.com/product/create",formData,{
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }
@@ -177,7 +177,7 @@
             },
             DeleteProduct(productId){
                 if(confirm('Are you sure ?')){
-                    axios.post(`http://localhost:3001/product/delete/${productId}`)
+                    axios.post(`https://vysingsun-api.onrender.com/product/delete/${productId}`)
                         .then(res => {
                             console.log("deleted?");
                             
