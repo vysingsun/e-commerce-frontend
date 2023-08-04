@@ -8,7 +8,7 @@
             </div>
         </div>
         <!-- list table -->
-        <div class="relative overflow-x-auto">
+        <div class="no-scrollbar relative overflow-x-auto h-[55vh] w-full overflow-y-auto">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead class="text-sm text-gray-900 uppercase dark:text-gray-400">
                     <tr>

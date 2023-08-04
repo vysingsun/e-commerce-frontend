@@ -25,7 +25,7 @@
                 <!-- <form> -->
 
                   <div >
-                    <h4 class="text-sm font-medium text-gray-900">Color 7</h4>
+                    <h4 class="text-sm font-medium text-gray-900">Color</h4>
                     
                     <fieldset class="mt-4 grid grid-cols-4 gap-4">
                       <legend class="sr-only">Choose a color</legend>

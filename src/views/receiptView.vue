@@ -1,3 +1,6 @@
+<script setup>
+    import { RouterLink } from 'vue-router';
+</script>
 <template>
     <div>
         <div class="flex gap-4 mx-52 py-10 text-4xl text-[#ffbe1c]">
@@ -27,13 +30,15 @@
     </div>
     <!--  -->
     <div class="ml-52 my-6 flex">
-        <button type="button" class="px-6 py-3.5 text-base font-medium text-white inline-flex items-center bg-[#ffbe1c] hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-yellow-100 rounded-lg text-center dark:bg-yellow-400 dark:hover:bg-yellow-400 dark:focus:ring-yellow-400">
-            View your order
-        </button>
+        <RouterLink to="/home/logined">
+            <button type="button" class="px-6 py-3.5 text-base font-medium text-white inline-flex items-center bg-[#ffbe1c] hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-yellow-100 rounded-lg text-center dark:bg-yellow-400 dark:hover:bg-yellow-400 dark:focus:ring-yellow-400">
+                View your order
+            </button>
+        </RouterLink>
         <div class="px-6 py-3.5">
             <strong>or</strong>
         </div>
-        <RouterLink to="/home">
+        <RouterLink to="/home/logined">
             <div class="text-blue-600 px-6 py-3.5">Visit our Store</div>
         </RouterLink>
     </div>

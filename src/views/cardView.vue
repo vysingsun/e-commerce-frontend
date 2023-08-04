@@ -20,7 +20,7 @@
                                         <div>
                                         <div class="flex justify-between text-base font-medium text-gray-900">
                                             <h3>
-                                                <div>{{ card.createdAt }}</div>
+                                                <!-- <div>{{ card.createdAt }}</div> -->
                                                 <div>{{ card.product.title }}</div>
                                             </h3>
                                             <p class="ml-4">${{ card.product.price }}</p>

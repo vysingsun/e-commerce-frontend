@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base:'/vysingsun_e_commerce.github.io',
+  // base:'/vysingsun_e_commerce.github.io',
   plugins: [
     vue(),
   ],

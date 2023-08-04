@@ -17,7 +17,7 @@ import router from '../router'
                         <button @Click="onClick(category._id,'')">{{category.name}}</button>
                         <ul class="pl-5 mt-2 space-y-1 list-disc list-inside">
                             <li v-for="item in category?.items" :key="item._id">
-                                <div @click="onClick(item.category, item._id)">{{item.name}}</div>
+                                <a @click="onClick(item.category, item._id)">{{item.name}}</a>
                             </li>                  
                         </ul>
                     </ul>

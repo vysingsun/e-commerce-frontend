@@ -83,7 +83,7 @@
                     </div>
                 </div>
                 <div class="w-full">
-                    <RouterLink to="/payment">
+                    <RouterLink to="/receipt">
                         <button @click="addPayment" class=" text-white bg-yellow-300 hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center dark:bg-yellow-400 dark:hover:bg-yellow-400 dark:focus:ring-yellow-400">Continue</button>
                     </RouterLink>
                 </div>
