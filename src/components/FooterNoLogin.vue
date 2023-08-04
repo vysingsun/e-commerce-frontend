@@ -1,8 +1,13 @@
+<script setup>
+    import { RouterLink } from 'vue-router';
+</script>
 <template>
     <div class="bg-[#ffdc1c] w-full px-8 py-2">
         <div class="flex items-center">
             <RouterLink to="/" class="flex-shrink-0">
-                <strong>Buy me a shoes</strong>
+                <div>
+                    <strong>Buy me a shoes</strong>
+                </div>
             </RouterLink>
             <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">

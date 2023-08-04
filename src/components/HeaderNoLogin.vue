@@ -7,14 +7,14 @@
             <div class="flex h-16 items-center justify-between">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <RouterLink to="/l">
+                        <RouterLink to="/">
                             <img class="w-24" src="../assets//image/logoadidas.png" alt="Your Company">
                         </RouterLink>
                     </div>
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
                             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                            <RouterLink to="/login" class=" text-white hover:bg-[#f2b31a] rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</RouterLink>
+                            <RouterLink to="/" class=" text-white hover:bg-[#f2b31a] rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</RouterLink>
                             <RouterLink to="/login" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">Products</RouterLink>
                             <RouterLink to="/login" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</RouterLink>
                             <RouterLink to="/login" class="text-white hover:bg-[#f2b31a] hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</RouterLink>
@@ -63,6 +63,6 @@
 </template>
 
 <script>
-    import { RouterLink, RouterView } from 'vue-router'
+    // import { RouterLink, RouterView } from 'vue-router'
     // 
 </script>
