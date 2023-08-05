@@ -10,7 +10,7 @@
     <div class="flex min-h-full items-stretch justify-center text-center md:items-center md:px-2 lg:px-4">
       <div class="flex w-full transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl">
         <div class="relative flex w-full items-center overflow-hidden bg-white px-4 pb-8 pt-14 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8">
-          <div  :key="product._id" class=" grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8">
+          <div class=" grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8">
             <div class="h-full my-32 rounded-lg sm:col-span-4 lg:col-span-5 bg-cover" >
               <img  :src="serverUrl+product.image" alt="" >
             </div>
@@ -84,14 +84,6 @@
         </div>
       </div>
     </div>
-    
-    <!-- test -->
-    <div class="flex flex-wrap">
-      <div class="flex items-center mr-4">
-          <input id="red-radio" type="radio" value="" name="colored-radio" class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-          <label for="red-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Red</label>
-      </div>
-    </div>
     <!-- Footer -->
     <Footer />
       
@@ -123,7 +115,6 @@
   },
   methods: {
     getProductByID(){
-      // console.log(quantity);
       axios.get(`https://vysingsun-api.onrender.com/product/${this.$route.params.id}`)
       .then(res =>{
         this.product = res.data[0];

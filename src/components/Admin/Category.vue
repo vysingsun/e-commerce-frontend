@@ -8,7 +8,7 @@
             </div>
         </div>
         <!-- list table -->
-        <div class="relative overflow-x-auto">
+        <div class="no-scrollbar relative overflow-x-auto h-[55vh] w-full overflow-y-auto">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead class="text-sm text-gray-900 uppercase dark:text-gray-400">
                     <tr>
@@ -39,9 +39,10 @@
                         </td>
                         <td class="px-6 py-4">
                             <div>Edit</div>
-                            <form>
+                            <!-- <form > -->
+                                <!-- @click="DeleteCategory(category._id)" -->
                                 <button @click="DeleteCategory(category._id)">Delete</button>
-                            </form>
+                            <!-- </form> -->
                         </td>
                     </tr>
                 </tbody>
@@ -50,7 +51,7 @@
     </div>
 
     <Popup v-if="showPopup">
-        <form>
+        <form @submit="addCategory">
             <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
                 <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
                 <div class="fixed inset-0 z-10 overflow-y-auto">
@@ -68,7 +69,7 @@
                                 </div>
                             </div>
                             <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                                <button v-on:click="addCategory()"  class="inline-flex w-full justify-center rounded-md bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 sm:ml-3 sm:w-auto">Add</button>
+                                <button type="submit" class="inline-flex w-full justify-center rounded-md bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 sm:ml-3 sm:w-auto">Add</button>
                                 <button @click="showPopup = false" type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">Cancel</button>
                             </div>
                         </div>
@@ -78,7 +79,7 @@
         </form>
     </Popup>
     <DeleteCatePopup v-if="showPopupDel">    
-        <form>
+        <!-- <form> -->
             <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
                 <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
                 <div class="fixed inset-0 z-10 overflow-y-auto">
@@ -104,7 +105,7 @@
                     </div>
                 </div>
             </div>
-        </form>
+        <!-- </form> -->
     </DeleteCatePopup>
 </template>
 
@@ -136,30 +137,27 @@
             
         },
         methods: {
-            async addCategory(){
-                
-                console.log(this.name);
-                console.log(this.desc);
-                console.log(this.imageUrl);
+            async addCategory(e){
+                e.preventDefault();
                 let result = await axios.post("https://vysingsun-api.onrender.com/category/create",{
                     name:this.name,
                     desc:this.desc,
                     imageUrl:this.imageUrl
                 });
                 console.log("called");
-                console.log(result);
-                
+                this.categories.push(result.data.data)
+                console.log(result.data.data);
+                this.showPopup = false
             },
             
-            DeleteCategory(categoryId){
-                
-                if(confirm('Are you sure jkj?')){
+            async DeleteCategory(categoryId){
+                if(confirm('Are you sure?')){
                     console.log(categoryId);
-                    axios.post(`https://vysingsun-api.onrender.com/category/delete/${categoryId}`)
-                        .then(res => {
-                            console.log("deleted?");
-                            
-                        }); 
+                    let result = await axios.post(`https://vysingsun-api.onrender.com/category/delete/${categoryId}`)
+                    .then(res => {
+                        console.log("deleted?");
+                        this.categories.pop(res.data.data)
+                    }); 
                 }
             }
         }

@@ -50,7 +50,7 @@
     </div>
 
     <Popup v-if="showPopup">
-        <form>
+        <!-- <form> -->
             <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
                 <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
                 <div class="fixed inset-0 z-10 overflow-y-auto">
@@ -80,7 +80,7 @@
                     </div>
                 </div>
             </div>
-        </form>
+        <!-- </form> -->
     </Popup>
     
 </template>

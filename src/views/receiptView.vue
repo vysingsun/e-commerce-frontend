@@ -59,7 +59,10 @@
         <div class="pt-6">
             <strong class="text-xl">$ {{card.product.price  }}</strong>
         </div>
-        
+        <!-- quantity -->
+        <div class="pt-6">
+            <strong class="text-xl">x {{card.quantity  }}</strong>
+        </div>
     </div>
     <div class="w-[80%] mx-52 h-[1px] bg-[#ffbe1c] my-8"></div>
     <div class="mx-52 flex justify-end">
