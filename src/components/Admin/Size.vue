@@ -39,9 +39,9 @@
                         </td>
                         <td class="px-6 py-4">
                             <div>Edit</div>
-                            <form>
+                            <!-- <form> -->
                                 <button @click="deleteSize(size._id)">Delete</button>
-                            </form>
+                            <!-- </form> -->
                         </td>
                     </tr>
                 </tbody>
@@ -107,9 +107,7 @@
         },
         async mounted(){
             this.sizes = await sizeApi.getSize();
-            // this.sizes = this.sizes.data
-            // console.log(this.sizes);
-
+            
             this.products = await productApi.getProductApi();
             this.products = this.products.data;
         },
@@ -118,6 +116,8 @@
                 let result = await axios.post("https://vysingsun-api.onrender.com/size/create",{
                     product:this.product,
                     size:this.size
+                }).then(res => {
+                    location.replace('/homeAdmin/size')
                 });
                 console.log("called");
                 console.log(result);
@@ -125,10 +125,10 @@
             deleteSize(sizeId){
                 if(confirm('Are you sure ?')){
                     axios.post(`https://vysingsun-api.onrender.com/size/delete/${sizeId}`)
-                        .then(res => {
-                            console.log("deleted?");
-                            
-                        }); 
+                    .then(res => {
+                        console.log("deleted?");
+                        location.replace('/homeAdmin/size')
+                    }); 
                 }
             }
         }

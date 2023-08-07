@@ -89,7 +89,7 @@ export default {
             await axios.get("https://vysingsun-api.onrender.com/card/all")
             .then(async(res) =>{
                 this.cards = await res.data.data;
-                
+                console.log(this.cards);
             })
         },
         async storeData() {

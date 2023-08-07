@@ -39,9 +39,9 @@
                         </td>
                         <td class="px-6 py-4">
                             <div>Edit</div>
-                            <form>
+                            <!-- <form> -->
                                 <button @click="deleteColor(color._id)">Delete</button>
-                            </form>
+                            <!-- </form> -->
                         </td>
                     </tr>
                 </tbody>
@@ -50,7 +50,7 @@
     </div>
 
     <Popup v-if="showPopup">
-        <form>
+        <!-- <form> -->
             <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
                 <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
                 <div class="fixed inset-0 z-10 overflow-y-auto">
@@ -80,7 +80,7 @@
                     </div>
                 </div>
             </div>
-        </form>
+        <!-- </form> -->
     </Popup>
     
 </template>
@@ -118,7 +118,8 @@
                 let result = await axios.post("https://vysingsun-api.onrender.com/color/create",{
                     product:this.product,
                     color:this.color
-                    
+                }).then(res => {
+                    location.replace('/homeAdmin/color')
                 });
                 console.log("called");
                 console.log(result);
@@ -126,10 +127,10 @@
             deleteColor(colorId){
                 if(confirm('Are you sure ?')){
                     axios.post(`https://vysingsun-api.onrender.com/color/delete/${colorId}`)
-                        .then(res => {
-                            console.log("deleted?");
-                            
-                        }); 
+                    .then(res => {
+                        console.log("deleted?");
+                        location.replace('/homeAdmin/color')
+                    }); 
                 }
             }
         }

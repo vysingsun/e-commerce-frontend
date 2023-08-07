@@ -144,16 +144,14 @@
                     desc:this.desc,
                     imageUrl:this.imageUrl
                 });
-                console.log("called");
                 this.categories.push(result.data.data)
-                console.log(result.data.data);
                 this.showPopup = false
             },
             
             async DeleteCategory(categoryId){
                 if(confirm('Are you sure?')){
                     console.log(categoryId);
-                    let result = await axios.post(`https://vysingsun-api.onrender.com/category/delete/${categoryId}`)
+                    await axios.post(`https://vysingsun-api.onrender.com/category/delete/${categoryId}`)
                     .then(res => {
                         console.log("deleted?");
                         this.categories.pop(res.data.data)

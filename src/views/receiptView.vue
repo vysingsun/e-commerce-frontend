@@ -17,11 +17,11 @@
         </div>
     </div>
     <!--  -->
-    <div class="flex w-full h-[400px] ">
+    <div class="ml-52 flex w-full h-[400px] ">
         <div class="flex h-full items-center">
             <img src="../assets/image/logoadidas.png" alt="">
         </div>
-        <div class="text-5xl h-full flex items-center"><strong>Buy me a shoes</strong></div>
+        <div class="ml-8 text-5xl h-full flex items-center"><strong>Buy me a shoes</strong></div>
     </div>
     <!--  -->
     <div class="ml-52 w-1/3 ">
@@ -38,9 +38,9 @@
         <div class="px-6 py-3.5">
             <strong>or</strong>
         </div>
-        <RouterLink to="/home/logined">
-            <div class="text-blue-600 px-6 py-3.5">Visit our Store</div>
-        </RouterLink>
+        <!-- <RouterLink to="/home/logined"> -->
+            <button @click="deleteCardById" class="text-blue-600 px-6 py-3.5">Visit our Store</button>
+        <!-- </RouterLink> -->
     </div>
     <div class="ml-52 mt-16 text-4xl">
         <strong>Order Summary</strong>
@@ -177,6 +177,18 @@ export default {
                 this.cards = await res.data.data;
                 console.log(this.cards);
             })
+        },
+        async deleteCardById(){
+            console.log("lalll");
+            console.log(this.$store.getters.getUserId);
+            for(const element of this.cards){
+                if(element.user._id == this.$store.getters.getUserId){
+                    await axios.post(`https://vysingsun-api.onrender.com/card/delete/userid/${this.$store.getters.getUserId}`)
+                    .then(res =>{
+                        console.log("Delete cards success!!");
+                    })
+                }
+            }
         }
     }
 }

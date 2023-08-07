@@ -28,7 +28,7 @@
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
                         <RouterLink to="/home/logined">
-                            <img class="w-24" src="../assets//image/logoadidas.png" alt="Your Company">
+                            <img class="w-10" src="../assets//image/logoadidas.png" alt="Your Company">
                         </RouterLink>
                     </div>
                     <div class="hidden md:block">
