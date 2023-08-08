@@ -23,7 +23,7 @@
           <div class="hidden relative lg:mt-0 lg:col-span-5 lg:flex">
               <div class="absolute top-6 left-36 -rotate-[30deg]">IT'S TIME TO GO</div>
               <div class="absolute top-32 -rotate-[30deg] text-7xl text-[#ffbe1c] italic"><strong>RUN</strong></div>
-              <img src="../assets/image/sh1 - Copy.png" alt="mockup">
+              <img src="../assets/image/sh1_Copy.png" alt="mockup">
           </div>                
       </div>
   </section>
