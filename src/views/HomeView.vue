@@ -44,9 +44,11 @@ import { RouterLink } from 'vue-router';
   <!-- product -->
   <div class="w-full  grid grid-cols-4 gap-4 p-10">
     <div v-for="(product, index) in productFromApi" :key="index" class="bg-white rounded-lg shadow-[1px_1px_20px_-6px_#0D2750] p-4">
-      <div>
-        <img class="w-full" :src="serverUrl + product.image" alt="Image">
-      </div>
+      <RouterLink :to="`/list/${product._id}`">
+        <div>
+          <img class="w-full" :src="serverUrl + product.image" alt="Image">
+        </div>
+      </RouterLink>
       <!-- star -->
       <div class="flex pt-4 justify-center">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-[#ffbe1c]">

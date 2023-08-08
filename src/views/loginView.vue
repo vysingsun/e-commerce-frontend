@@ -1,6 +1,3 @@
-<script setup>
-import { RouterLink } from "vue-router";
-</script>
 <template class="bg-black">
   <div
     id="i"

@@ -110,36 +110,7 @@ export default {
                 promises.push(promise);
             }
             localStorage.setItem("promises", JSON.stringify(promises));
-// 
-            // let arrayRes = [1,2]
-            // for(const element of this.cards){
-            //     axios.post("http://localhost:3001/order/create", element)
-            //     .then(response => {
-            //         console.log('Data stored successfully!', response);
-            //         // console.log(response.data.data._id);
-            //         arrayRes.push(response.data.data._id);
-            //     })
-            // }
-            // console.log(arrayRes);
-            // localStorage.setItem("arrayRes", JSON.stringify(arrayRes));
-            // let retrievedArrayString = localStorage.getItem('arrayRes');
-            // let retrievedArray = JSON.parse(retrievedArrayString);
-
-            // console.log(retrievedArray);
         },
-
-        // storeData() {
-        //     for(const element of this.cards){
-        //         axios.post("http://localhost:3001/order/create", {
-        //             product: element.product,
-        //             user: element.user
-        //         })
-        //         .then(response => {
-        //             console.log('Data stored successfully!', response);
-        //         })
-        //     }
-        // },
-        
         removeProductFromCard(cardId){
             axios.post(`https://vysingsun-api.onrender.com/card/delete/${cardId}`)
             .then(res => {
